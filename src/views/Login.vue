@@ -2,12 +2,16 @@
  * @Author: Timber.Wang
  * @Date: 2021-12-09 21:29:28
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2021-12-21 18:17:36
+ * @LastEditTime: 2021-12-22 00:59:23
  * @Description: 登陆组件
 -->
 <template>
   <div>
     <el-form :rules="loginRules"
+             v-loading="loading"
+             element-loading-text="正在登陆，请稍后"
+             element-loading-spinner="el-icon-loading"
+             element-loading-background="rgba(0, 0, 0, 0.8)"
              ref="loginForm"
              :model="loginForm"
              class="loginContainer">
@@ -52,13 +56,19 @@ export default {
   name: "Login",
   data () {
     return {
+      // 验证码图像接口
       captchaUrl: '/captcha?time=' + new Date(),
+      // 登陆提交表单
       loginForm: {
         username: "admin",
         password: "123456",
         code: "",
       },
-      checked: true,
+
+      loading: false, //加载动画
+      checked: true, //记住我按钮
+
+      // 登陆前端验证
       loginRules: {
         // 验证用户名是否合法
         username: [
@@ -69,15 +79,16 @@ export default {
         password: [
           { required: true, message: "请输入登录密码", trigger: "blur" },
           {
-            min: 5,
+            min: 3,
             max: 15,
-            message: "长度在 5 到 15 个字符",
+            message: "长度在 3 到 15 个字符",
             trigger: "blur",
           },
         ],
         // 验证验证码是否合法
         code: [{ required: true, message: "请输入验证码", trigger: "blur" }],
       },
+
     };
   },
   methods: {
@@ -86,14 +97,29 @@ export default {
       this.captchaUrl = '/captcha?time=' + new Date();
     },
 
-
     // 点击登陆事件
     submitLogin () {
       // 使用异步函数
       this.$refs.loginForm.validate(async (valid) => {
         // 判断表单合法性
         if (valid) {
-          alert('200!');
+          // 打开加载动画
+          this.loading = true;
+          this.postRequest('/login', this.loginForm).then(resp => {
+            // alert(JSON.stringify(resp));
+            // 关闭加载动画
+            this.loading = false;
+
+            // 判断 resp 是否存在
+            if (resp) {
+              //获取用户 token 令牌
+              const tokenStr = resp.obj.tokenHead + resp.obj.token;
+              // 存储用户 token 令牌于 sessionStorage
+              window.sessionStorage.setItem('tokenStr', tokenStr);
+              // 路由跳转 Home
+              this.$router.replace('/home');
+            }
+          })
         } else {
           this.$message.error('请填写登陆信息!');
           return false;
