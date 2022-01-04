@@ -2,11 +2,12 @@
  * @Author: Timber.Wang
  * @Date: 2021-12-09 21:07:03
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2021-12-22 01:01:17
+ * @LastEditTime: 2022-01-04 15:50:10
  * @Description: 
  */
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import router from './router'
@@ -35,5 +36,6 @@ Vue.prototype.deleteRequest = deleteRequest;
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

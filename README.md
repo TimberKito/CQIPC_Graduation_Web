@@ -2,7 +2,7 @@
  * @Author: Timber
  * @Date: 2021-12-09 23:06:15
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2021-12-22 01:09:42
+ * @LastEditTime: 2022-01-04 16:16:07
  * @web: www.timberkito.com
  * @Description: 
 -->
@@ -26,6 +26,6 @@
 - [x] 封装请求
 - [x] 配置请求转发解决跨域问题
 - [x] 登陆跳转页面
-- [ ] 导航菜单功能实现
-- [ ] 封装菜单请求工具
+- [x] 导航菜单功能实现
+- [x] 封装菜单请求工具
 - [ ] 完善菜单请求工具
