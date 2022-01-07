@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:33:04
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:29:56
+ * @LastEditTime: 2022-01-07 21:41:02
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "SysLog",
 }
 </script>
 

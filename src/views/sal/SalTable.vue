@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:27:06
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:17
+ * @LastEditTime: 2022-01-07 21:38:27
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "SalTable",
 }
 </script>
 

@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 15:51:44
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:34
+ * @LastEditTime: 2022-01-07 22:32:12
  * @Description: 菜单请求工具类
  */
 import router from "../router";
@@ -17,6 +17,7 @@ import {
  * @param {*} store 
  */
 export const initMenu = (router, store) => {
+  // 判断请求中有无数据
   if (store.state.routes.length > 0) {
     return;
   }
@@ -63,6 +64,10 @@ export const formatRoutes = (routes) => {
       iconCls: iconCls,
       children: children,
       component(resolve) {
+        if (component.startsWith('Home')) {
+          require(['../views/' + component + '.vue'], resolve);
+        } else
+
         if (component.startsWith('Emp')) {
           require(['../views/emp/' + component + '.vue'], resolve);
         } else if (component.startsWith('Per')) {

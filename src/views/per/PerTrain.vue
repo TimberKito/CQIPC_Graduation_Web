@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:24:34
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:40
+ * @LastEditTime: 2022-01-07 21:37:23
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "PerTrain",
 }
 </script>
 

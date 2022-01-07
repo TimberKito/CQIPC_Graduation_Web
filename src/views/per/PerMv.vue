@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:25:17
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-04 16:37:42
+ * @LastEditTime: 2022-01-07 21:37:25
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-name: "",
+  name: "PerMv",
 }
 </script>
 

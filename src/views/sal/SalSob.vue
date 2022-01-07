@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:26:29
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:06
+ * @LastEditTime: 2022-01-07 21:38:29
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "SalSob",
 }
 </script>
 

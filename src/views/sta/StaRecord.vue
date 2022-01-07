@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:29:25
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:11
+ * @LastEditTime: 2022-01-07 21:39:52
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "StaRecord",
 }
 </script>
 

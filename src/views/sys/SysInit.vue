@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:33:43
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:27
+ * @LastEditTime: 2022-01-07 21:40:59
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "SysInit",
 }
 </script>
 

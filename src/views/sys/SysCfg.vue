@@ -2,7 +2,7 @@
  * @Author: Timber.Wang
  * @Date: 2022-01-04 16:32:51
  * @LastEditors: Timber.Wang
- * @LastEditTime: 2022-01-07 21:30:26
+ * @LastEditTime: 2022-01-07 21:41:01
  * @Description: 
 -->
 <template>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "",
+  name: "SysCfg",
 }
 </script>
 
